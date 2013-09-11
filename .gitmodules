@@ -4,3 +4,6 @@
 [submodule "themes/tmux-colors-solarized"]
 	path = themes/tmux-colors-solarized
 	url = https://github.com/seebi/tmux-colors-solarized.git
+[submodule "_vim/bundle/vim-markdown"]
+	path = _vim/bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
