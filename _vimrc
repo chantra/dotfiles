@@ -31,6 +31,8 @@ endif
 if v:version > 700
     set cursorline
     hi CursorLine cterm=NONE,underline ctermbg=NONE
-    set colorcolumn=80
+    if exists("+colorcolumn")
+      set colorcolumn=80
+    end
     hi! link CursorColumn CursorLine
 endif
