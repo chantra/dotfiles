@@ -8,6 +8,7 @@ set number
 set ruler
 set background=dark
 set sw=4 ts=4 sts=4 et 
+set incsearch
 
 " check that we have solarized theme installed
 if !empty(globpath(&rtp, 'colors/solarized.vim'))
@@ -26,7 +27,7 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif 
 
-" Underline current line and add 80 char delimiter 
+" Underline current line and add 80 char delimiter
 if v:version > 700
     set cursorline
     hi CursorLine cterm=NONE,underline ctermbg=NONE
