@@ -16,3 +16,9 @@
 [submodule "_vim/bundle/unite.vim"]
 	path = _vim/bundle/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
+[submodule "_vim/bundle/vimshell"]
+	path = _vim/bundle/vimshell
+	url = https://github.com/Shougo/vimshell.vim.git
+[submodule "_vim/bundle/vimproc.vim"]
+	path = _vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
