@@ -25,7 +25,7 @@ endif
 " finally, import local stuff if any
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
-endif 
+endif
 
 " Underline current line and add 80 char delimiter
 if v:version > 700
@@ -36,3 +36,7 @@ if v:version > 700
     end
     hi! link CursorColumn CursorLine
 endif
+
+" Highlight trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
