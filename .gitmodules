@@ -19,3 +19,6 @@
 [submodule "_vim/bundle/vim-vagrant"]
 	path = _vim/bundle/vim-vagrant
 	url = https://github.com/markcornick/vim-vagrant.git
+[submodule "_vim/bundle/tagbar"]
+	path = _vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
