@@ -1,13 +1,13 @@
 "  Pathogen
 call pathogen#infect()
 
-" 
+"
 syntax on
 set modeline
 set number
 set ruler
 set background=dark
-set sw=4 ts=4 sts=4 et 
+set sw=4 ts=4 sts=4 et
 set incsearch
 
 " check that we have solarized theme installed
@@ -25,6 +25,14 @@ endif
 " syntax check
 if !empty(globpath(&rtp, 'plugin/syntastic.vim'))
     let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+endif
+
+" airline
+if !empty(globpath(&rtp, 'plugin/airline.vim'))
+    set laststatus=2
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline_theme='powerlineish'
 endif
 
 " finally, import local stuff if any
