@@ -22,6 +22,11 @@ if !empty(globpath(&rtp, 'colors/solarized.vim'))
   colorscheme solarized
 endif
 
+" syntax check
+if !empty(globpath(&rtp, 'plugin/syntastic.vim'))
+    let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+endif
+
 " finally, import local stuff if any
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
@@ -40,3 +45,4 @@ endif
 " Highlight trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+
