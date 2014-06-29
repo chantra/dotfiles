@@ -1,3 +1,6 @@
+[user]
+  name = chantra
+  email = chantra@debuntu.org
 [color]
   ui = auto
 [color "branch"]
