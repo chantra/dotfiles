@@ -24,6 +24,7 @@ POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
 POWERLINE_GIT_UNTRACKED="%F{yellow}✭%F{black}"
 POWERLINE_GIT_RENAMED="➜"
 POWERLINE_GIT_UNMERGED="═"
+POWERLINE_HIDE_HOST_NAME="true"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -78,6 +79,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 source $HOME/.zshrc.local
+
+# preferred editor
+export EDITOR='vim'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
