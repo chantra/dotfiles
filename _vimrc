@@ -54,3 +54,6 @@ endif
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
+" GO files
+au FileType go set noet
+
