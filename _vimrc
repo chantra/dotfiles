@@ -25,6 +25,7 @@ endif
 " syntax check
 if !empty(globpath(&rtp, 'plugin/syntastic.vim'))
     let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+    let g:syntastic_ruby_checkers          = ['rubocop']
 endif
 
 " airline
