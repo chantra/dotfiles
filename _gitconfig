@@ -29,6 +29,7 @@
   ri = rebase --interactive --autosquash
   amend = commit --amend
   logbranch = log --graph --all --decorate
+  rootdir = rev-parse --show-toplevel
 [gc]
     auto = 0
 
