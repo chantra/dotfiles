@@ -1,2 +1,5 @@
 .netrwhist
 _vimproc*so
+.DS_Store
+_vim/**/tags
+
