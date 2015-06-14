@@ -52,3 +52,6 @@
 [submodule "_vim/bundle/vim-thrift"]
 	path = _vim/bundle/vim-thrift
 	url = https://github.com/solarnz/thrift.vim.git
+[submodule "_vim/bundle/vim-instant-markdown"]
+	path = _vim/bundle/vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown.git

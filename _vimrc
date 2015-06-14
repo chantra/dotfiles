@@ -36,6 +36,11 @@ if !empty(globpath(&rtp, 'plugin/airline.vim'))
     let g:airline_theme='powerlineish'
 endif
 
+" vim-instant-markdown
+if !empty(globpath(&rtp, 'after/ftplugin/markdown/instant-markdown.vim'))
+    " Do not autoload, use :InstantMarkdownPreview instead
+    let g:instant_markdown_autostart = 0
+endif
 " finally, import local stuff if any
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
