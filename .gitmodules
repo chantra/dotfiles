@@ -55,3 +55,6 @@
 [submodule "_vim/bundle/vim-go"]
 	path = _vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "_oh-my-zsh_custom/plugins/zsh-completions"]
+	path = _oh-my-zsh_custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
