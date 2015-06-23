@@ -67,7 +67,7 @@ POWERLINE_HIDE_HOST_NAME="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(docker git pip python mercurial tmux virtualenv vagrant zsh-syntax-highlighting rvm)
+plugins=(docker git pip python mercurial tmux virtualenv vagrant zsh-syntax-highlighting rvm zsh-completions)
 
 if [ $PLATFORM=="Darwin" ]
 then
