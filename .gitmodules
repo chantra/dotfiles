@@ -64,3 +64,6 @@
 [submodule "_vim/bundle/vim-lawrencium"]
 	path = _vim/bundle/vim-lawrencium
 	url = https://github.com/ludovicchabant/vim-lawrencium.git
+[submodule "_vim/bundle/vim-airline-themes"]
+	path = _vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes

@@ -65,3 +65,5 @@ au FileType go set noet
 
 " spaces indentation for YAML files
 au FileType yaml setl sw=2 ts=2 sts=2 et
+" spaces indentation for JS files
+au FileType js setl sw=2 ts=2 sts=2 et
