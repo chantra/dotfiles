@@ -73,6 +73,7 @@ plugins=(
     aws
     berkshelf
     docker
+    docker-compose
     fabric
     git
     mercurial
