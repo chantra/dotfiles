@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source $HOME/.zshrc.local
+source $HOME/.zshrc.local 2> /dev/null
 
 # preferred editor
 export EDITOR='vim'
