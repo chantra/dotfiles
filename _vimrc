@@ -28,6 +28,13 @@ if !empty(globpath(&rtp, 'plugin/syntastic.vim'))
     let g:syntastic_ruby_checkers          = ['rubocop']
 endif
 
+" fuzzy search
+if !empty(globpath(&rtp, 'plugin/ctrlp.vim'))
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(lo|exe|so|dll|o)$',
+      \ }
+endif
 " airline
 if !empty(globpath(&rtp, 'plugin/airline.vim'))
     set laststatus=2
