@@ -28,6 +28,11 @@ if !empty(globpath(&rtp, 'plugin/syntastic.vim'))
     let g:syntastic_ruby_checkers          = ['rubocop']
 endif
 
+" vim notes
+if !empty(globpath(&rtp, 'plugin/notes.vim'))
+    let g:notes_directories = ['~/Documents/Notes', '~/Dropbox/Shared Notes']
+endif
+
 " fuzzy search
 if !empty(globpath(&rtp, 'plugin/ctrlp.vim'))
     let g:ctrlp_custom_ignore = {

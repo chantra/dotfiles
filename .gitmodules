@@ -70,3 +70,9 @@
 [submodule "_vim/bundle/ctrlp.vim"]
 	path = _vim/bundle/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "_vim/bundle/vim-notes"]
+	path = _vim/bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
+[submodule "_vim/bundle/vim-misc"]
+	path = _vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
