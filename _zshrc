@@ -71,6 +71,7 @@ export PATH="/usr/local/bin:$PATH"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
     aws
+    battery
     berkshelf
     docker
     docker-compose
@@ -129,3 +130,5 @@ alias mosh6='mosh -6'
 
 # Local stuff
 export PATH="${HOME}/bin":$PATH
+
+command -v vg >/dev/null 2>&1 && eval "$(vg eval --shell zsh)"
