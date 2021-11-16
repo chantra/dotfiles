@@ -12,7 +12,7 @@ export ZSH_CUSTOM=$HOME/.oh-my-zsh_custom
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="ducknorris"
+ZSH_THEME="geoffgarside"
 
 # POWERLINE TWEAKS
 POWERLINE_DETECT_SSH="true"
