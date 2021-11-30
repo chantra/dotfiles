@@ -90,7 +90,7 @@ plugins=(
 
 if [ $PLATFORM=="Darwin" ]
 then
-    plugins+=(brew osx)
+    plugins+=(brew macos)
 fi
 
 source $ZSH/oh-my-zsh.sh
