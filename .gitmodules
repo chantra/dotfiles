@@ -43,9 +43,6 @@
 [submodule "_vim/bundle/jedi-vim"]
 	path = _vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
-[submodule "_vim/bundle/vim-hack"]
-	path = _vim/bundle/vim-hack
-	url = https://github.com/hhvm/vim-hack.git
 [submodule "_vim/bundle/vim-thrift"]
 	path = _vim/bundle/vim-thrift
 	url = https://github.com/solarnz/thrift.vim.git
