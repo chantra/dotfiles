@@ -58,9 +58,6 @@
 [submodule "_oh-my-zsh_custom/plugins/zsh-completions"]
 	path = _oh-my-zsh_custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
-[submodule "_oh-my-zsh_custom/plugins/berkshelf"]
-	path = _oh-my-zsh_custom/plugins/berkshelf
-	url = https://github.com/berkshelf/berkshelf-zsh-plugin.git
 [submodule "_vim/bundle/vim-lawrencium"]
 	path = _vim/bundle/vim-lawrencium
 	url = https://github.com/ludovicchabant/vim-lawrencium.git

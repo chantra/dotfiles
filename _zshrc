@@ -72,7 +72,6 @@ export PATH="/usr/local/bin:$PATH"
 plugins=(
     aws
     battery
-    berkshelf
     docker
     docker-compose
     fabric
