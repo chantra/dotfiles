@@ -80,6 +80,7 @@ plugins=(
     pip
     python
     rvm
+    ssh-agent
     tmux
     vagrant
     virtualenv
