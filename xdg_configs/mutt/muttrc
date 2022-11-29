@@ -1,0 +1,79 @@
+set ssl_force_tls = yes
+set mail_check = 60
+# Display in threaded mode and reverse order
+set sort = "threads"
+set sort_aux = "reverse-date-received"
+set copy = no
+
+# Don't mark unread old
+set mark_old=no
+# Sender, email address, and sign-off line must match
+unset use_domain        # because joe@localhost is just embarrassing
+set use_from = yes
+set from = "chantr4@gmail.com"
+set realname = "Manu Bretelle"
+
+# Imap settings
+set imap_user = "chantr4@gmail.com"
+#set imap_pass = "<mutt-app-specific-password>"
+
+# Smtp settings
+set smtp_url = "smtps://chantr4@smtp.gmail.com"
+set smtp_pass = $imap_pass
+
+# Remote gmail folders
+set folder = "imaps://imap.gmail.com/"
+#set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+# Mailboxes to monitor for new email
+mailboxes =List/Linux/bpf =List/Linux/netdev
+# sidebar
+set sidebar_visible=yes
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+
+# Enable extended mailbox mode to calculate total, new, and flagged
+# message counts for each mailbox.
+set mail_check_stats
+
+# Display the Sidebar mailboxes using this format string.
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+# Sort the mailboxes in the Sidebar using this method:
+#       count    – total number of messages
+#       flagged  – number of flagged messages
+#       new      – number of new messages
+#       path     – mailbox path
+#       unsorted – do not sort the mailboxes
+set sidebar_sort_method = 'unsorted'
+
+# ================  Composition  ====================
+set editor = "vim"      # Set your favourite editor.
+set edit_headers = yes  # See the headers when editing
+set charset = UTF-8     # value of $LANG; also fallback for send_charset
+
+# Cache
+set header_cache="~/.cache/mutt/headers/"
+#set tmpdir="~/.mutt/.tmp/"
+set message_cachedir="~/.cache/mutt/messages/"
+set message_cache_clean = no
+
+
+bind index G imap-fetch-mail
+bind browser G check-new
+
+source ~/.config/mutt/dracula.muttrc
+
+# Diff syntac highlight
+color body green default "^diff \-.*"
+color body green default "^index [a-f0-9].*"
+color body green default "^\-\-\- .*"
+color body green default "^[\+]{3} .*"
+color body cyan default "^[\+][^\+]+.*"
+color body red  default "^\-[^\-]+.*"
+color body brightblue default "^@@ .*"
