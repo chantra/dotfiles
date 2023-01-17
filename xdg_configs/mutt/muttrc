@@ -1,9 +1,30 @@
+# Configure mutt to read from the lei maildir inbox
+set mbox_type=Maildir
+set folder="~/Mail/overlay"
+set mbox="~/Mail/overlay"
+set record="+.Sent"
+set postponed="+.Drafts"
+set spoolfile="~/Mail/overlay"
+
+# Sort by threads.Last updated threads at the top.
+set sort="threads"
+set strict_threads="yes"
+set sort_browser="reverse-date"
+set sort_aux="reverse-last-date-received"
+set collapse_unread="yes"
+
+# Keybindings
+bind index = collapse-all
+bind index - collapse-thread
+# Sync lei lists
+# Configured using https://josefbacik.github.io/kernel/2021/10/18/lei-and-b4.html
+macro index O "<shell-escape>lei up $folder<enter>" "run lei to sync all mails"
+
+# Show Message-Id in the window
+unignore Message-Id:
+
 set ssl_force_tls = yes
 set mail_check = 60
-# Display in threaded mode and reverse order
-set sort = "threads"
-set sort_aux = "reverse-date-received"
-set copy = no
 
 # Don't mark unread old
 set mark_old=no
@@ -13,63 +34,33 @@ set use_from = yes
 set from = "chantr4@gmail.com"
 set realname = "Manu Bretelle"
 
-# Imap settings
-set imap_user = "chantr4@gmail.com"
-#set imap_pass = "<mutt-app-specific-password>"
-
-# Smtp settings
+# Smtp settings, will prompt me for password/token the first time around.
 set smtp_url = "smtps://chantr4@smtp.gmail.com"
-set smtp_pass = $imap_pass
-
-# Remote gmail folders
-set folder = "imaps://imap.gmail.com/"
-#set spoolfile = "+INBOX"
-set postponed = "+[Gmail]/Drafts"
-set record = "+[Gmail]/Sent Mail"
-set trash = "+[Gmail]/Trash"
-# Mailboxes to monitor for new email
-mailboxes =List/Linux/bpf =List/Linux/netdev
-# sidebar
-set sidebar_visible=yes
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CO sidebar-open
-bind pager \CP sidebar-prev
-bind pager \CN sidebar-next
-bind pager \CO sidebar-open
-
-# Enable extended mailbox mode to calculate total, new, and flagged
-# message counts for each mailbox.
-set mail_check_stats
-
-# Display the Sidebar mailboxes using this format string.
-set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
-# Sort the mailboxes in the Sidebar using this method:
-#       count    – total number of messages
-#       flagged  – number of flagged messages
-#       new      – number of new messages
-#       path     – mailbox path
-#       unsorted – do not sort the mailboxes
-set sidebar_sort_method = 'unsorted'
 
 # ================  Composition  ====================
 set editor = "vim"      # Set your favourite editor.
 set edit_headers = yes  # See the headers when editing
 set charset = UTF-8     # value of $LANG; also fallback for send_charset
 
-# Cache
-set header_cache="~/.cache/mutt/headers/"
-#set tmpdir="~/.mutt/.tmp/"
-set message_cachedir="~/.cache/mutt/messages/"
-set message_cache_clean = no
-
-
-bind index G imap-fetch-mail
-bind browser G check-new
-
+# Theme, because stuffs look nicer
 source ~/.config/mutt/dracula.muttrc
+# Search patterns for reference....
+# http://www.mutt.org/doc/manual/#tab-simplesearch-keywords
 
-# Diff syntac highlight
+# Pager View Options ---------------------------------
+# Allow to see threading from within the pager (email) view.
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+# Diff syntax highlight
+# It is much easier to read diffs with syntax highlighting.
 color body green default "^diff \-.*"
 color body green default "^index [a-f0-9].*"
 color body green default "^\-\-\- .*"
