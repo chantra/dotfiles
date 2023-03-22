@@ -1,6 +1,6 @@
 # Configure mutt to read from the lei maildir inbox
 set mbox_type=Maildir
-set folder="~/Mail/overlay"
+set folder="~/Mail"
 set mbox="~/Mail/overlay"
 set record="+.Sent"
 set postponed="+.Drafts"
@@ -13,12 +13,20 @@ set sort_browser="reverse-date"
 set sort_aux="reverse-last-date-received"
 set collapse_unread="yes"
 
+# Apply operation to tagged messages without requiring tag-prefix
+#set auto_tag="yes"
+
 # Keybindings
 bind index = collapse-all
 bind index - collapse-thread
 # Sync lei lists
 # Configured using https://josefbacik.github.io/kernel/2021/10/18/lei-and-b4.html
-macro index O "<shell-escape>lei up $folder<enter>" "run lei to sync all mails"
+macro index O "<shell-escape>lei up $folder/overlay<enter>" "run lei to sync all mails"
+macro index,pager A "<save-message>=Archive<enter>" "Archive Message"
+# tag-prefix only work on visible messages, we can't know if the thread is
+# collapsed or not, so tag-prefix twice...
+macro index,pager Y "<collapse-thread><tag-thread><tag-prefix><save-message>=Archive<enter><enter>" "Archive thread"
+macro index,pager \' "<tag-pattern>~R !~D !~F<enter><tag-prefix><save-message>=Archive<enter>" "Archive thread"
 
 # Show Message-Id in the window
 unignore Message-Id:
@@ -68,3 +76,6 @@ color body green default "^[\+]{3} .*"
 color body cyan default "^[\+][^\+]+.*"
 color body red  default "^\-[^\-]+.*"
 color body brightblue default "^@@ .*"
+
+# Show number of collapsed messages
+set index_format = "%4C %Z %2M %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
