@@ -7,18 +7,12 @@
 [submodule "_vim/bundle/vim-markdown"]
 	path = _vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule "powerline"]
-	path = powerline
-	url = https://github.com/Lokaltog/powerline.git
 [submodule "consolas-powerline-vim"]
 	path = consolas-powerline-vim
 	url = https://github.com/eugeneching/consolas-powerline-vim.git
 [submodule "_vim/bundle/unite.vim"]
 	path = _vim/bundle/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
-[submodule "_vim/bundle/vim-vagrant"]
-	path = _vim/bundle/vim-vagrant
-	url = https://github.com/markcornick/vim-vagrant.git
 [submodule "_vim/bundle/tagbar"]
 	path = _vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
@@ -70,6 +64,3 @@
 [submodule "themes/solarized"]
 	path = themes/solarized
 	url = https://github.com/altercation/solarized.git
-[submodule "powerline-fonts"]
-	path = powerline-fonts
-	url = https://github.com/powerline/fonts.git
